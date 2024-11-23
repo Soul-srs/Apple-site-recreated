@@ -11,13 +11,14 @@ body {
     width: 50.25%;
     background: linear-gradient(15deg, transparent 10%, #00a6ffa5 40%, #4800ffa5 70%, #9900fff5 100%);
     height: 7vh;
-    position: fixed;
+    position: absolute;
     top: 3vh;
     right: 50%; 
     animation: aie1 0.65s ease-in-out forwards; 
     transform-origin: right;
     filter: blur(20px);
     opacity: 0;
+    z-index: 1;
 }
 
 @keyframes aie1 {
@@ -38,13 +39,14 @@ body {
     width: 50.25%;
     background: linear-gradient(-15deg, transparent 10%, #ff9d00a5 40%, #f200ffa5 70%, #9900fff5 100%);
     height: 7vh;
-    position: fixed;
+    position: absolute;
     top: 3vh;
     left: 50%;
     animation: aie2 0.65s ease-in-out forwards;
     transform-origin: left;
     filter: blur(20px);
     opacity: 0;
+    z-index: 1;
 }
 
 @keyframes aie2 {
@@ -64,11 +66,12 @@ body {
 #mid {
     width: 1%;
     height: 7vh;
-    position: fixed;
+    position: absolute;
     top: 3vh;  
     background-color: #9900fff5;
     animation: mid 0.1s ease-in-out forwards;
     filter: blur(20px);
+    z-index: 1;
 }
 
 @keyframes mid {
@@ -84,15 +87,17 @@ body {
     width: 100%;
     height: 100%;
     position: fixed;
-    transition: height 0.45s ease;
+    transition: opacity 0.65s ease;
     left: 0;
-    filter: blur(80px);
-    background: linear-gradient(120deg, #00a6ffa5 25%, #4800ffa5 40%, #9900fff5 50%, #f200ffa5 60%, #ff9d00a5 75%, #00ff95a5 100%);
-    animation: gradientShift 4s infinite alternate, opacity 0.75s ease;    
+    background: linear-gradient(120deg, #00a6ff 25%, #4800ff 40%, #9900ff 50%, #f200ff 60%, #ff9d00 75%, #00ff95 100%);
+    animation: gradientShift 3s infinite alternate;    
     overflow: hidden;
     background-size: 200% 200%;
-    transition: opacity 1.5s ease;
     opacity: 0;
+    border-radius: 0;
+    z-index: 1;
+    filter: blur(80px);
+    transform: scale(1.8);
 }
 
 @keyframes gradientShift {
@@ -109,17 +114,17 @@ body {
     height: 6vh;
     background-color: #ffffff;
     position: fixed;
-    transition: height 0.45s ease;
+    transition: height 0.65s ease, border-radius 0.65s ease;
     left: 0;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.1);
+    z-index: 1;
 }
 
 #menu ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 60px;
     height: 100%;
-    margin: 0;
 }
 
 #menu li {
@@ -143,6 +148,186 @@ body {
     top: 1.25%;
 }
 
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte quando necessário */
+}
 
+li {
+    margin: 10px; /* Margem padrão para os itens */
+}
 
+#apmn {
+    left: 12.5%;
+    position: absolute;
+}
 
+#lmn {
+    left: 17%;
+    position: absolute; /* Espaçamento maior para o item 'Loja' */
+}
+
+#mmn {
+    left: 22%;
+    position: absolute; /* Espaçamento maior para o item 'Mac' */
+}
+
+#imn {
+    left: 27%;
+    position: absolute; /* Espaçamento personalizado para o item 'iPad' */
+}
+
+#ipmn {
+    left: 32%;
+    position: absolute; /* Espaçamento personalizado para o item 'iPhone' */
+}
+
+#wmn {
+    left: 38%;
+    position: absolute; /* Espaçamento para o item 'Watch' */
+}
+
+#amn {
+    left: 43.5%;
+    position: absolute; /* Ajuste de margem para o item 'AirPods' */
+}
+
+#tcmn {
+    left: 49.5%;
+    position: absolute; /* Ajuste de margem para o item 'Tv e Casa' */
+}
+
+#emn {
+    left: 56.5%;
+    position: absolute; /* Ajuste de margem para o item 'Entretenimento' */
+}
+
+#acmn {
+    left: 65%;
+    position: absolute; /* Ajuste de margem para o item 'Acessórios' */
+}
+
+#smn {
+    left: 72.5%;
+    position: absolute; /* Ajuste de margem para o item 'Suporte' */
+}
+
+#semn {
+    left: 79%;
+    position: absolute;
+}
+
+#bmn {
+    left: 84%;
+    position: absolute;
+}
+
+#hl1 {
+    font-size: 50px;
+    background: linear-gradient(to right, #00a6ff, #4800ff, #9900ff, #f200ff, #ff9d00);
+    -webkit-background-clip: text; 
+    color: transparent;
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    font-family: 'SF Pro Display', sans-serif;
+    z-index: 0;
+}
+
+#hl2 {
+    position: absolute;
+    top: 25%;
+    left: 18.5%; 
+    font-family: 'SF Pro Display', sans-serif;
+    color: rgb(90, 90, 90);
+    font-size: 50px;
+    z-index: 0;
+}
+
+#hl3 {
+    position: absolute;
+    top: 32.5%;
+    left: 10%; 
+    font-family: 'SF Pro Display', sans-serif;
+    color: rgb(90, 90, 90);
+    font-size: 50px;
+    z-index: 0;
+}
+
+#menu2 {
+    position: relative;
+    font-size: 36px;
+    background: linear-gradient(45deg, #00a6ff, #4800ff, #9900ff, #f200ff, #ff9d00); 
+    width: 81%;
+    height: 36%;
+    position: absolute;
+    top: 55%;
+    left: 9%;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+    filter: blur(0.25px);
+    animation: gradientShift 3s infinite alternate;
+    overflow: hidden;
+    background-size: 200% 200%;  
+}
+
+#menu2-d {
+    position: relative;
+    font-size: 36px;
+    background: #fff;
+    width: 98%;
+    height: 92%;
+    position: absolute;
+    border-radius: 30px;
+    filter: blur(20px);
+    z-index: 0;
+}
+
+#hl4 {
+    font-size: 25px;
+    background: linear-gradient(to right, #00a6ff, #4800ff, #9900ff, #f200ff, #ff9d00);
+    -webkit-background-clip: text; 
+    color: transparent;
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    font-family: 'SF Pro Display', sans-serif;
+    z-index: 0;
+}
+
+#hl5 {
+    position: absolute;
+    top: 100%;
+    left: 21.5%; 
+    font-family: 'SF Pro Display', sans-serif;
+    color: rgb(90, 90, 90);
+    font-size: 25px;
+    z-index: 0;
+}
+
+#imgen {
+    position: relative;
+    font-size: 36px;
+    background: linear-gradient(45deg, #00a6ff, #4800ff, #9900ff, #f200ff, #ff9d00); 
+    width: 90%;
+    height: 510px;
+    position: absolute;
+    top: 112.5%;
+    left: 10%;
+    border-radius: 30px 0 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+    filter: blur(25px);
+    animation: gradientShift 3s infinite alternate;
+    overflow: hidden;
+    background-size: 200% 200%;    
+}
