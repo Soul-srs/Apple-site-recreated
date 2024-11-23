@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+#apple-intelligence-effect1 {
+    width: 50.25%;
+    background: linear-gradient(15deg, transparent 10%, #00a6ffa5 40%, #4800ffa5 70%, #9900fff5 100%);
+    height: 7vh;
+    position: fixed;
+    top: 3vh;
+    right: 50%; 
+    animation: aie1 0.65s ease-in-out forwards; 
+    transform-origin: right;
+    filter: blur(20px);
+    opacity: 0;
+}
+
+@keyframes aie1 {
+    0% {
+        transform: scaleX(0);
+        background: linear-gradient(15deg, transparent 10%, #00a6ffa5 40%, #4800ffa5 70%, #9900fff5 100%);
+        opacity: 0;
+    }
+    100% {
+        background: linear-gradient(15deg, transparent 10%, #00a6ffa5 40%, #4800ffa5 70%, #9900fff5 100%);
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+
+#apple-intelligence-effect2 {
+    width: 50.25%;
+    background: linear-gradient(-15deg, transparent 10%, #ff9d00a5 40%, #f200ffa5 70%, #9900fff5 100%);
+    height: 7vh;
+    position: fixed;
+    top: 3vh;
+    left: 50%;
+    animation: aie2 0.65s ease-in-out forwards;
+    transform-origin: left;
+    filter: blur(20px);
+    opacity: 0;
+}
+
+@keyframes aie2 {
+    0% {
+        transform: scaleX(0);
+        background: linear-gradient(-15deg, transparent 10%, #ff9d00a5 40%, #f200ffa5 70%, #9900fff5 100%);
+        opacity: 0;
+    } 
+
+    100% {
+        background: linear-gradient(-15deg, transparent 10%, #ff9d00a5 50%, #f200ffa5 75%, #9900fff5 100%);
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+#mid {
+    width: 1%;
+    height: 7vh;
+    position: fixed;
+    top: 3vh;  
+    background-color: #9900fff5;
+    animation: mid 0.1s ease-in-out forwards;
+    filter: blur(20px);
+}
+
+@keyframes mid {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+#menu {
+    width: 100%;
+    height: 6vh;
+    background-color: #ffffff;
+    position: fixed;
+    transition: height 0.45s ease;
+    left: 0;
+}
+
+#menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    height: 100%;
+    margin: 0;
+}
+
+#menu li {
+    list-style-type: none;
+}
+
+#menu a {
+    text-decoration: none;
+    line-height: 6vh; 
+    display: block; 
+    padding: 0 10px;
+    font-size: small;
+    font-family: 'SF Pro Display', sans-serif;
+    color: rgb(90, 90, 90);
+    position: fixed;
+    top: 0%;
+}
+
+#svg1 {
+    position: fixed;
+    top: 1.25%;
+}
+
+
+
+
